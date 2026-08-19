@@ -1,0 +1,166 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+ font-family: Arial, sans-serif;
+background: pink;
+min-height: 100vh;
+padding: 30px 15px;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.balance-box {
+ background:white;
+ padding: 20px;
+text-align: center;
+border-radius: 10px;
+ margin-bottom: 20px;
+box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.balance-box h3 {
+    color: #555;
+}
+
+.balance-box h2 {
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+.summary {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.income,
+.expense {
+ width: 50%;
+background: white;
+padding: 20px;
+text-align: center;
+ border-radius: 10px;
+box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.income p {
+color: green;
+    font-size: 22px;
+    margin-top: 8px;
+}
+
+.expense p {
+    color: red;
+    font-size: 22px;
+    margin-top: 8px;
+}
+
+.form-box,
+.history {
+ background: white;
+ padding: 20px;
+ border-radius: 10px;
+margin-bottom: 20px;
+box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-box h2,
+.history h2 {
+    margin-bottom: 15px;
+}
+
+form {
+ display: flex;
+ flex-direction: column;
+}
+
+label {
+    margin: 8px 0 5px;
+    font-weight: bold;
+}
+
+input,
+select {
+ padding: 12px;
+border: 1px solid #ccc;
+ border-radius: 5px;
+font-size: 16px;
+}
+
+button {
+margin-top: 15px;
+ padding: 12px;
+ border: none;
+ border-radius: 5px;
+background: #222;
+color: white;
+font-size: 16px;
+cursor: pointer;
+
+}
+button:hover {
+    background: #444;
+}
+#transaction-list {
+    list-style: none;
+}
+.transaction {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+padding: 12px;
+margin-bottom: 10px;
+  background: #f7f7f7;
+border-radius: 5px;
+ border-right: 5px solid;
+}
+
+.transaction.income {
+    border-color: green;
+}
+
+.transaction.expense {
+    border-color: red;
+}
+
+.transaction-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.transaction-amount {
+    font-weight: bold;
+}
+
+.delete-btn {
+    background: red;
+    padding: 7px 10px;
+    margin: 0;
+    font-size: 14px;
+}
+
+@media (max-width: 500px) {
+
+ .summary {
+        flex-direction: column;
+    }
+
+ .income,
+    .expense {
+        width: 100%;
+    }
+
+}
